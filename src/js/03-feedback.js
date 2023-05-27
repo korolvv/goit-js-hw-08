@@ -35,9 +35,9 @@ messageField.addEventListener(
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  textStorage.email = inputField.value;
-  textStorage.message = messageField.value;
+
   console.log(textStorage);
+  textStorage = {};
   e.target.reset();
-  localStorage.clear();
+  localStorage.removeItem('feedback-form-state');
 });
