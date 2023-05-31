@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   try {
     const data = localStorage.getItem(formSaveStorage);
     if (!data) return;
-    textStorage = JSON.parse();
+    textStorage = JSON.parse(data);
     Object.entries(textStorage).forEach(([key, value]) => {
       form.elements[key].value = value;
     });
